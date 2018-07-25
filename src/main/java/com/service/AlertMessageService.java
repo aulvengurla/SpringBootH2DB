@@ -14,8 +14,8 @@ public class AlertMessageService {
 	@Autowired
 	AlertMessageRepository alertMessageRepository;
 
-	public List<AlertMessage> getAlertMessageList() { 
-		return this.alertMessageRepository.findAll();
+	public List<AlertMessage> getAlertMessageList(String displaymsg) { 
+		return this.alertMessageRepository.findByDisplayMsg(displaymsg);
 	}
 
 	
